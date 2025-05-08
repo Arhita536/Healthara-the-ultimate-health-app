@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wellness Buddy - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.jpeg" type="image/x-icon">
+
+</head>
+<body class="w3-light-blue" style="font-family: 'Quicksand', sans-serif; background-image: url('cover.jpeg'); background-size: cover;">
+  <!-- Thin Hamburger Navigation for Laptop Only -->
+<div style="display: flex; justify-content: space-between; align-items: center; background-color: teal; padding: 6px 16px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: 40px;">
+  <h2 style="color: white; margin: 0; font-size: 20px;">💧 Healthara</h2>
+  <button onclick="toggleLaptopMenu()" style="background: none; border: none; color: white; font-size: 22px; cursor: pointer;">☰</button>
+</div>
+
+<!-- Expandable Nav Links -->
+<div id="laptopMenu" style="display: none; background-color: #00796b; padding: 8px 16px; position: fixed; top: 40px; left: 0; right: 0; z-index: 999;">
+  <a href="index.html" style="color: white; text-decoration: none; margin-right: 15px; font-size: 16px;">🏠 Home</a>
+  <a href="food.html" style="color: white; text-decoration: none; margin-right: 15px; font-size: 16px;">🍽️ Aaj Kya Khayein</a>
+  <a href="mini_monk.html" style="color: white; text-decoration: none; margin-right: 15px; font-size: 16px;">🧘 Mini Monk</a>
+  <a href="hydro.html" style="color: white; text-decoration: none; margin-right: 15px; font-size: 16px;">💧 Hydro Buddy</a>
+  <a href="exercise.html" style="color: white; text-decoration: none; margin-right: 15px; font-size: 16px;">🤸 Exercise</a>
+  <a href="sleep.html" style="color: white; text-decoration: none; font-size: 16px;">🌙 Sleep</a>
+</div>
+
+<script>
+  function toggleLaptopMenu() {
+    var menu = document.getElementById("laptopMenu");
+    menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+  }
+</script>
+
+
+
+<div style="padding-top: 80px;">
+  <!-- Logo Section -->
+  <div class="w3-center w3-margin-top">
+    <img src="logo.png" alt="Wellness Buddy Logo" style="max-width: 150px; height: auto;">
+  </div>
+
+  <!-- Welcome Section -->
+  <div class="w3-container w3-center w3-padding-64 w3-white w3-round-large w3-card-4" style="max-width: 500px; margin: auto; background: rgba(255,255,255,0.9);">
+    <h2 class="w3-text-teal">Welcome to Healthara 🌿</h2>
+    <p>Let's begin your journey to a healthier you!</p>
+
+    <input id="username" class="w3-input w3-border w3-round w3-margin-top" type="text" placeholder="Enter your name">
+
+    <button onclick="startQuiz()" class="w3-button w3-teal w3-margin-top w3-round-large w3-hover-green">
+      Start Health Quiz
+    </button>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/05/06/04/20250506043345-5TOZZX4S.js"></script>
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    if (menu.classList.contains("w3-hide")) {
+      menu.classList.remove("w3-hide");
+    } else {
+      menu.classList.add("w3-hide");
+    }
+  }
+</script>
+
+</body>
+</html>
+
